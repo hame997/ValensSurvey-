@@ -1,4 +1,8 @@
+using Dapper;
+using ValensSurvey.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+DefaultTypeMap.MatchNamesWithUnderscores = true;
 
 // Add services to the container.
 
@@ -6,6 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IDbService, DbService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
