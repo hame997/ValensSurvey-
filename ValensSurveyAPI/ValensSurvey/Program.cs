@@ -17,6 +17,9 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IDbService, DbService>();
 builder.Services.AddScoped<ISurveyService, SurveyService>();
 
+builder.Services.AddScoped<IDbService, DbService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

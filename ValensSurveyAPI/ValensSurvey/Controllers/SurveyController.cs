@@ -11,12 +11,10 @@ namespace ValensSurvey.Controllers
     public class SurveyController : ControllerBase
     {
         private readonly ISurveyService _surveyService;
-
         public SurveyController(ISurveyService surveyService)
         {
             _surveyService = surveyService;
         }
-
         [HttpPost]
         public async Task<IActionResult> CreateSurvey([FromBody] Survey survey)
         {
