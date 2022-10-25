@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IDbService, DbService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<IDbService, DbService>();
+builder.Services.AddScoped<ISurveyService, SurveyService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
