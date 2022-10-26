@@ -5,9 +5,9 @@ namespace ValensSurvey.Services
     public interface ISurveyService
     {
         Task<List<Survey>> GetAll();
-        public Survey Get(int surveyId);
-        public Survey Update(Survey survey);
+        public Task<Survey> Get(int surveyId);
+        public Task<Survey> Update(Survey survey);
         Task<Survey> Create(Survey survey);
-        public void Delete(int id);
+        public Task<bool> Delete(int id);
     }
 }

@@ -17,21 +17,28 @@ namespace ValensSurvey.Services
                 user);
             return user;
         }
-        public void Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            var deleteQuestion = await _dbService.EditData("DELETE FROM public.users WHERE id=@Id", new { id });
+            return true;
         }
-        public User Get(int userId)
+        public async Task<User> Get(int userId)
         {
-            throw new NotImplementedException();
+            var userList = await _dbService.GetAsync<User>("SELECT * FROM public.users where id=@id", new { userId });
+            return userList;
         }
-        public Task<List<User>> GetAll()
+        public async Task<List<User>> GetAll()
         {
-            throw new NotImplementedException();
+            var userList = await _dbService.GetAll<User>("SELECT * FROM public.users", new { });
+            return userList;
         }
-        public User Update(User user)
+        public async Task<User> Update(User user)
         {
-            throw new NotImplementedException();
+            var updateUser =
+                        await _dbService.EditData(
+                            "Update public.users SET full_name=@FullName, password=@Password, role=@Role WHERE id=@Id",
+                            user);
+            return user;
         }
     }
 }

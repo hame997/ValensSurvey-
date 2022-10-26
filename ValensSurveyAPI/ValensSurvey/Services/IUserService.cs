@@ -5,9 +5,9 @@ namespace ValensSurvey.Services
     public interface IUserService
     {
         Task<List<User>> GetAll();
-        public User Get(int userId);
-        public User Update(User user);
+        public Task<User> Get(int userId);
+        public Task<User> Update(User user);
         Task<User> Create(User user);
-        public void Delete(int id);
+        public Task<bool> Delete(int id);
     }
 }
