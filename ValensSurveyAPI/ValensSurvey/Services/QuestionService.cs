@@ -24,7 +24,7 @@ namespace ValensSurvey.Services
         }
         public async Task<Question> Get(int questionId)
         {
-            var questionList = await _dbService.GetAsync<Question>("SELECT * FROM public.questions where id=@id", new { questionId });
+            var questionList = await _dbService.GetAsync<Question>("SELECT * FROM public.questions where id=@questionId", new { questionId });
             return questionList;
         }
         public async Task<List<Question>> GetAll()

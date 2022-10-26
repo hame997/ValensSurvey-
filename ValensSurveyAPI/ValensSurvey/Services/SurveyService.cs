@@ -24,7 +24,7 @@ namespace ValensSurvey.Services
         }
         public async Task<Survey> Get(int surveyId)
         {
-            var surveyList = await _dbService.GetAsync<Survey>("SELECT * FROM public.surveys where id=@id", new { surveyId });
+            var surveyList = await _dbService.GetAsync<Survey>("SELECT * FROM public.surveys where id=@surveyId", new { surveyId });
             return surveyList;
         }
         public async Task<List<Survey>> GetAll()

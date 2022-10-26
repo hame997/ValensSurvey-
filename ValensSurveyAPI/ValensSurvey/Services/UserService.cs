@@ -24,12 +24,13 @@ namespace ValensSurvey.Services
         }
         public async Task<User> Get(int userId)
         {
-            var userList = await _dbService.GetAsync<User>("SELECT * FROM public.users where id=@id", new { userId });
+            var userList = await _dbService.GetAsync<User>("SELECT * FROM public.users where id=@userId", new { userId });
             return userList;
         }
         public async Task<List<User>> GetAll()
         {
-            var userList = await _dbService.GetAll<User>("SELECT * FROM public.users", new { });
+            var userList = await _dbService.GetAll<User>("SELECT * FROM public.users",new { });
+         
             return userList;
         }
         public async Task<User> Update(User user)

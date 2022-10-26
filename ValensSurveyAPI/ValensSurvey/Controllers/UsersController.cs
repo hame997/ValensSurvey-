@@ -22,5 +22,33 @@ namespace ValensSurvey.Controllers
 
             return Ok(result);
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var result = await _userService.Get(id);
+
+            return Ok(result);
+        }
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] User user)
+        {
+            var result = await _userService.Update(user);
+
+            return Ok(result);
+        }
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _userService.Delete(id);
+
+            return Ok(result);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _userService.GetAll();
+
+            return Ok(result);
+        }
     }
 }
