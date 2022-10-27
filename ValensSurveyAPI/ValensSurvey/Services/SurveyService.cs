@@ -19,7 +19,7 @@ namespace ValensSurvey.Services
         }
         public async Task<bool> Delete(int id)
         {
-            var deleteQuestion = await _dbService.EditData("DELETE FROM public.surveys WHERE id=@Id", new { id });
+            var deleteSurvey = await _dbService.EditData("DELETE FROM public.surveys WHERE id=@Id", new { id });
             return true;
         }
         public async Task<Survey> Get(int surveyId)
