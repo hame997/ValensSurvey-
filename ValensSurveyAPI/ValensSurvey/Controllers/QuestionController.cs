@@ -10,13 +10,22 @@ namespace ValensSurvey.Controllers
     public class QuestionController : ControllerBase
     {
         private readonly IQuestionService _questionService;
-        public QuestionController(IQuestionService questionService)
+        private readonly ISurveyService _surveyService;
+        public QuestionController(IQuestionService questionService, ISurveyService surveyService)
         {
             _questionService = questionService;
+            _surveyService = surveyService;
         }
         [HttpPost]
         public async Task<IActionResult> CreateSurvey([FromBody] Question question)
         {
+            Survey survey = await _surveyService.Get(question.SurveyId);
+
+            if (survey == null)
+            {
+                return NotFound("Survey does not exist !");
+            }
+
             var result = await _questionService.Create(question);
 
             return Ok(result);

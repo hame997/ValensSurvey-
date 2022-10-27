@@ -27,3 +27,11 @@ C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\obj\Debug\net6.0\refint\Val
 C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\obj\Debug\net6.0\ValensSurvey.pdb
 C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\obj\Debug\net6.0\ValensSurvey.genruntimeconfig.cache
 C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\obj\Debug\net6.0\ref\ValensSurvey.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Valens\ValensSurvey-\ValensSurveyAPI\ValensSurvey\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
